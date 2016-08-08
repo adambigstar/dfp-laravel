@@ -4,7 +4,7 @@
         <title>Laravel</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-        <script src="http://content.jwplatform.com/libraries/YZYQJ1FP.js"></script>
+        <script src="https://content.jwplatform.com/libraries/YZYQJ1FP.js"></script>
         <script>jwplayer.key="ABCdeFG123456SeVenABCdeFG123456SeVen==";</script>
 
         <style>
