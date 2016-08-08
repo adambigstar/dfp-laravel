@@ -45,7 +45,7 @@
 
                 <script>
                     jwplayer("myElement").setup({
-                        file: "//content.jwplatform.com/videos/hWF9vG66-TNpruJId.mp4",
+                        file: "https://content.jwplatform.com/videos/hWF9vG66-TNpruJId.mp4",
                     });
                 </script>
 
