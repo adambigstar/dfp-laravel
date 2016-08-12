@@ -4,7 +4,7 @@
         <title>Laravel</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-        <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js">
+        <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
         <script src="https://content.jwplatform.com/libraries/YZYQJ1FP.js"></script>
         <script>jwplayer.key="ABCdeFG123456SeVenABCdeFG123456SeVen==";</script>
 
