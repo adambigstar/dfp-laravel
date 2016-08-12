@@ -41,8 +41,8 @@
     <body>
         <div class="container">
             <div class="content">
-
-                <div id="myElement"></div>
+              <img src='http://pubads.g.doubleclick.net/gampad/ad?iu=/316192035/preroll&sz=8x8&t=&c=12345678'/>
+              <div id="myElement"></div>
 
                 <script>
                     jwplayer("myElement").setup({
