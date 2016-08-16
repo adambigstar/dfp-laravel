@@ -1,4 +1,6 @@
+var gulp = require('gulp');
 var elixir = require('laravel-elixir');
+php = require('gulp-connect-php');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,5 +14,41 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+
+  mix.copy('vendor/bower_dl/**', 'public/vendor');
+
+  mix.sass('app.scss');
+
+  mix.styles([
+    'app.css',
+  ], 'public/css/app.css'
+  );
+
+  mix.scripts([
+      'base-modules.js',
+      'app.js',
+      'controllers/app-controller.js',
+      'controllers/film.js',
+    ], 'public/js/app.js'
+  );
+
+
+  mix.copy('resources/assets/images/**', 'public/images');
+  mix.copy('resources/assets/fonts/**', 'public/fonts');
+
+  mix.version('css/app.css');
+  mix.version('js/app.js');
+
 });
+
+gulp.task('serve', function() {
+
+  // start the php server
+  // make sure we use the public directory since this is Laravel
+  php.server({
+    base: './public'
+  });
+
+});
+
+

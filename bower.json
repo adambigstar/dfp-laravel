@@ -1,0 +1,27 @@
+{
+  "name": "Laravel",
+  "description": "JwPlayer Prototype",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor/bower_dl",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "~1.5.8",
+    "angular-aria": "~1.5.8",
+    "angular-messages": "~1.5.8",
+    "angular-resource": "~1.5.8",
+    "angular-animate": "~1.5.8",
+    "angular-touch": "~1.5.8",
+    "angular-loader": "~1.5.8",
+    "angular-mocks": "~1.5.8",
+    "angular-sanitize": "~1.5.8",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0",
+    "angular-ui-router": "^0.3.1",
+    "ng-jwplayer": "^0.2.1"
+  }
+}

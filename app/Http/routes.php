@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'AppController@index' );
+Route::get('home', 'AppController@home' );
+Route::get('film', 'AppController@film' );
