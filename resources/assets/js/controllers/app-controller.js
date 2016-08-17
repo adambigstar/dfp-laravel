@@ -1,7 +1,7 @@
 appControllers.controller('AppController', ['$rootScope', '$scope', '$log', '$state',
   function ($rootScope, $scope, $log, $state) {
     console.log('app controller');
-    $state.go('home');
+    $state.go('film');
 
     $rootScope.showFilm = function() {
       $state.go('film');

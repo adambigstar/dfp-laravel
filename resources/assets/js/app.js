@@ -3,7 +3,7 @@ var app = angular.module('app', ['ui.router', 'ngRoute', 'ngAnimate', 'ng-jwplay
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
-  $urlRouterProvider.otherwise("home");
+  $urlRouterProvider.otherwise("film");
 
   $stateProvider
     .state('home', {
@@ -16,12 +16,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     });
 });
 
-// app.config(['$interpolateProvider', function($interpolateProvider) {
-//   $interpolateProvider.startSymbol('<%');
-//   $interpolateProvider.endSymbol('%>');
-// }]);
-
 app.config(function($interpolateProvider) {
-  $interpolateProvider.startSymbol('//');
-  $interpolateProvider.endSymbol('//');
+  $interpolateProvider.startSymbol('<%');
+  $interpolateProvider.endSymbol('%>');
 });
