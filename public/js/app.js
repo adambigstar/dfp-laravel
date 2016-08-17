@@ -44,6 +44,7 @@ appControllers.controller('AppController', ['$rootScope', '$scope', '$log', '$st
 
 appControllers.controller('FilmController', ['$scope', '$log', '$sce', 'jwplayerService',
   function ($scope, $log, $sce, jwplayerService) {
+
     $scope.file = $sce.trustAsResourceUrl('http://content.jwplatform.com/videos/hWF9vG66-TNpruJId.mp4');
     //$scope.file = $sce.trustAsResourceUrl('https://youtu.be/zSWdZVtXT7E');
     $scope.deviceType = 'desktop';
@@ -53,10 +54,9 @@ appControllers.controller('FilmController', ['$scope', '$log', '$sce', 'jwplayer
     $scope.height = 270;
     $scope.mediaTitle = 'jwplayer test video';
     $scope.mediaDescription = 'description';
-    //var streamPageUrl = '//www.youtube.com/watch?v=8CjdLYBDUqw'
     $scope.streamPageUrl = 'http://content.jwplatform.com/videos/hWF9vG66-TNpruJId.mp4';
     $scope.imageUrl = '//content.jwplatform.com/thumbs/hWF9vG66-480.jpg';
-    $scope.mediaPageUrl = 'https://content.jwplatform.com/videos';
+    $scope.mediaPageUrl = 'http://www.bigstar.tv';
     $scope.ott = 'bigstar';
     $scope.genres = 'animation';
     $scope.partners = 'acme';
@@ -88,93 +88,58 @@ appControllers.controller('FilmController', ['$scope', '$log', '$sce', 'jwplayer
     // 'ott%3D' + $scope.ott +
 
     $scope.schedule = {
-            'adbreak-preroll1': {
-              tag: $scope.tag,
-              offset: 'pre',
-            },
-            'adbreak-preroll2': {
-              tag: $scope.tag,
-              offset: 'pre'
-            },
-            'adbreak-preroll3': {
-              tag: $scope.tag,
-              offset: 'pre'
-            },
-            'adbreak-midroll1': {
-              tag: $scope.tag,
-              offset: 15
-            },
-            'adbreak-midroll2': {
-              tag: $scope.tag,
-              offset: 30
-            },
-            'adbreak-midroll3': {
-              tag: $scope.tag,
-              offset: 45
-            },
-            'adbreak-midroll4': {
-              tag: $scope.tag,
-              offset: 60
-            },
-          };
+      'adbreak-preroll1': {
+        tag: $scope.tag,
+        offset: 'pre',
+      },
+      'adbreak-preroll2': {
+        tag: $scope.tag,
+        offset: 'pre'
+      },
+      'adbreak-preroll3': {
+        tag: $scope.tag,
+        offset: 'pre'
+      },
+      'adbreak-midroll1': {
+        tag: $scope.tag,
+        offset: 15
+      },
+      'adbreak-midroll2': {
+        tag: $scope.tag,
+        offset: 30
+      },
+      'adbreak-midroll3': {
+        tag: $scope.tag,
+        offset: 45
+      },
+      'adbreak-midroll4': {
+        tag: $scope.tag,
+        offset: 60
+      },
+    };
 
-     $scope.options = {
-        autostart: true,
-        width: "640",
-        height: "360",
-        image: $scope.imageUrl,
-        title: $scope.mediaTitle,
-        description: $scope.mediaDescription,
-        mediaid: $scope.mediaId,
-        advertising: {
-          client: $scope.client,
-          admessage: 'The ad will end in xx seconds',
-          skipoffset: "0",
-          cuetext: 'Advertisement',
-          skipmessage: 'Skip ad in xx',
-          skiptext: 'Skip',
-          vpaidmode: 'insecure',
-          companiondiv: {
-            id: 'companion-ad'
-          },
-          schedule: $scope.schedule
-          }
-        };
-
-    // worked
-    // $scope.options = {
-    //   autostart: true,
-    //   width: "640",
-    //   height: "360",
-    //   image: $scope.imageUrl,
-    //   title: $scope.mediaTitle,
-    //   description: $scope.mediaDescription,
-    //   mediaid: $scope.mediaId,
-    //   advertising: {
-    //     client: $scope.client,
-    //     schedule: {"myAds":{"offset":"pre","tag":$scope.tag}}
-    //   }
-    // };
-
-    // $scope.options = {
-    //   height: 270,
-    //   width: 480,
-    //   file: $scope.streamPageUrl,
-    //   image: $scope.imageUrl,
-    //   advertising: {
-    //     client: 'googleima',
-    //     schedule: * ,
-    //     admessage: 'The ad will end in xx seconds',
-    //     skipoffset: 15,
-    //     cuetext: 'Advertisement',
-    //     skipmessage: 'Skip ad in xx',
-    //     skiptext: 'Skip',
-    //     vpaidmode: 'enabled',
-    //     companiondiv: {
-    //       id: 'companion-ad'
-    //     }
-    //   }
-    // };
+    $scope.options = {
+      autostart: true,
+      width: "640",
+      height: "360",
+      image: $scope.imageUrl,
+      title: $scope.mediaTitle,
+      description: $scope.mediaDescription,
+      mediaid: $scope.mediaId,
+      advertising: {
+        client: $scope.client,
+        admessage: 'The ad will end in xx seconds',
+        skipoffset: "0",
+        cuetext: 'Advertisement',
+        skipmessage: 'Skip ad in xx',
+        skiptext: 'Skip',
+        vpaidmode: 'insecure',
+        companiondiv: {
+          id: 'companion-ad'
+        },
+        schedule: $scope.schedule
+      }
+    };
 
     $scope.$on('ng-jwplayer-ready', function(event, args) {
       $log.info('Player ' + args.playerId + ' ready. Playing video');
