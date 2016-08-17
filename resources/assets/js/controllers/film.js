@@ -12,7 +12,7 @@ appControllers.controller('FilmController', ['$scope', '$log', '$sce', 'jwplayer
     $scope.mediaDescription = 'description';
     $scope.streamPageUrl = 'http://content.jwplatform.com/videos/hWF9vG66-TNpruJId.mp4';
     $scope.imageUrl = '//content.jwplatform.com/thumbs/hWF9vG66-480.jpg';
-    $scope.mediaPageUrl = 'https://content.jwplatform.com/videos';
+    $scope.mediaPageUrl = 'http://www.bigstar.tv';
     $scope.ott = 'bigstar';
     $scope.genres = 'animation';
     $scope.partners = 'acme';
