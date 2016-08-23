@@ -46,7 +46,7 @@ appControllers.controller('FilmController', ['$rootScope', '$scope', '$log', '$s
     // 'device%3D' + $scope.device + '%26' +
     // 'ott%3D' + $scope.ott +
 
-    $scope.loadAd = function() {
+    $scope.loadAd = function () {
 
       $scope.schedule = {
         'adbreak-preroll1': {
@@ -108,42 +108,58 @@ appControllers.controller('FilmController', ['$rootScope', '$scope', '$log', '$s
       var player = jwplayer('film-player').setup($scope.options);
       // player.setup($scope.options);
 
-      player.on("adRequest",function(event){
-          $scope.adStatus += "ad request" + "\n";
-        });
-      player.on("adError",function(event){
-          $scope.$apply(function () {
-            $scope.adStatus += "error: " + event.message + "\n";
-          });
+      player.on("adRequest", function (event) {
+        $scope.adStatus += "ad request" + "\n";
+        $scope.adStatus += "tag: " + event.tag + "\n";
+        $scope.adStatus += "\n";
+      });
 
-          console.log(event.message);
+      player.on("adStarted", function (event) {
+        $scope.adStatus += "tag: " + event.tag + "\n";
+        $scope.adStatus += "\n";
+      });
+
+      player.on("adError", function (event) {
+        $scope.$apply(function () {
+          $scope.adStatus += "error: " + event.message + "\n";
+          $scope.adStatus += "\n";
         });
-      player.on("adImpression",function(event){
-          $scope.$apply(function () {
-            $scope.adStatus += "The ad impression was fired." + "\n";
-            $scope.adStatus += "title: " + event.adtitle + "\n";
-            $scope.adStatus += "creative type: " + event.creativetype + "\n";
-            $scope.adStatus += "mediafile: " + event.mediafile + "\n";
-          });
+
+        console.log(event.message);
+      });
+
+      player.on("adImpression", function (event) {
+        $scope.$apply(function () {
+          $scope.adStatus += "The ad impression was fired." + "\n";
+          $scope.adStatus += "title: " + event.adtitle + "\n";
+          $scope.adStatus += "creative type: " + event.creativetype + "\n";
+          $scope.adStatus += "mediafile: " + event.mediafile + "\n";
+          $scope.adStatus += "tag: " + event.tag + "\n";
+          $scope.adStatus += "\n";
         });
-      player.on("adTime",function(event) {
-          var remaining = Math.round(event.duration-event.position);
-          //$rootScope.adStatus += "The ad completes in "+remaining+" seconds.";
+      });
+
+      player.on("adTime", function (event) {
+        var remaining = Math.round(event.duration - event.position);
+        //$rootScope.adStatus += "The ad completes in "+remaining+" seconds.";
+      });
+
+      player.on("adClick", function (event) {
+        $scope.$apply(function () {
+          $scope.adStatus += "The user clicked the ad." + "\n";
+          $scope.adStatus += "\n";
         });
-      player.on("adClick",function(event){
-          $scope.$apply(function () {
-            $scope.adStatus += "The user clicked the ad." + "\n";
-          });
+      });
+
+      player.on("adComplete", function (event) {
+        $scope.$apply(function () {
+          $scope.adStatus += "The ad was completely watched." + "\n";
+          $scope.adStatus += "\n";
         });
-      player.on("adComplete",function(event){
-          $scope.$apply(function () {
-            $scope.adStatus += "The ad was completely watched." + "\n";
-          });
-        });
+      });
 
     };
 
     $scope.loadAd();
-
 
   }]);
