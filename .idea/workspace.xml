@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4a192a8-f469-4092-8d15-f7c5c9e320c6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/images/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/css/app.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/app-5371f37b60.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/app.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/rev-manifest.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="$PROJECT_DIR$/public/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/app.css.map" afterPath="$PROJECT_DIR$/public/css/app.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js.map" afterPath="$PROJECT_DIR$/public/js/app.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/css/app.css" afterPath="$PROJECT_DIR$/resources/assets/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/app.js" afterPath="$PROJECT_DIR$/resources/assets/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/film.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/film.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/film.blade.php" afterPath="$PROJECT_DIR$/resources/views/film.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
     </list>
     <ignored path="dfp-laravel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -441,7 +437,7 @@
       <workItem from="1471858049011" duration="4372000" />
       <workItem from="1471863506746" duration="32000" />
       <workItem from="1471864070972" duration="9870000" />
-      <workItem from="1471924714391" duration="4899000" />
+      <workItem from="1471924714391" duration="4937000" />
     </task>
     <task id="LOCAL-00001" summary="file url fix">
       <created>1470644525476</created>
@@ -541,11 +537,18 @@
       <option name="project" value="LOCAL" />
       <updated>1471414383708</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="load ad feature">
+      <created>1471929631929</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1471929631930</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77750000" />
+    <option name="totallyTimeSpent" value="77788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
@@ -596,7 +599,8 @@
     <MESSAGE value="CORS" />
     <MESSAGE value="angularjs jwplayer" />
     <MESSAGE value="public assets" />
-    <option name="LAST_COMMIT_MESSAGE" value="public assets" />
+    <MESSAGE value="load ad feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="load ad feature" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
