@@ -32,7 +32,6 @@
 
   <script src="/vendor/jwplayer/jwplayer.js"></script>
   <script>jwplayer.key="GE2JX7e69GX40av0azfSavIhSG2BsawITMRrug"</script>
-  <script src="/vendor/ng-jwplayer/jwplayer.js"></script>
 
   <script src="/js/app.js"></script>
 
@@ -40,40 +39,34 @@
 
 </head>
 <body ng-app="app" ng-controller="AppController">
-<div class="site-wrapper">
 
-  <div class="site-wrapper-inner">
-
-    <div class="cover-container">
-
-      <div class="masthead clearfix">
-        <div class="inner">
-          <h3 class="masthead-brand">BIGSTAR TV</h3>
-          <nav>
-            <ul class="nav masthead-nav">
-              <li><a href ng-click="showHome()">Home</a></li>
-              <li><a href ng-click="showFilm()">Film</a></li>
-              <li><a href ng-click="showContact()">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">BIGSTAR TV</a>
       </div>
-
-      <div class="inner cover">
-        @yield('content')
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <input type="text" class="form-control" placeholder="Search...">
+        </form>
       </div>
-
-      <div class="mastfoot">
-        <div class="inner">
-          <p>&copy; 2016 <a href="bigstar.tv">BIGSTAR TV</a></p>
-        </div>
-      </div>
-
     </div>
+  </nav>
 
+  <div class="container">
+    @yield('content')
   </div>
-
-</div>
-
 </body>
 </html>

@@ -1,5 +1,5 @@
 
-var app = angular.module('app', ['ui.router', 'ngRoute', 'ngAnimate', 'ng-jwplayer', 'app-controllers']);
+var app = angular.module('app', ['ui.router', 'ngRoute', 'ngAnimate', 'app-controllers']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
